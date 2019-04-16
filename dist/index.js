@@ -19,12 +19,10 @@ var petNum = 0;
 var batNum = 0;
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-
-app.get("/", https_1.request, response => {
+app.get("/", http.request, response => {
     console.log(Date.now() + " Ping received");
     response.sendStatus(200);
 });
-
 app.listen(process.env.PORT);
 setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);

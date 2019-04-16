@@ -31,6 +31,7 @@ exports.config = {
         "d100",
         "flip",
         "8ball",
+        "funny",
         "stop",
         "list",
         "help"
