@@ -19,14 +19,16 @@ var petNum = 0;
 var batNum = 0;
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-app.get("/", https_1.request, response => {
-    console.log(Date.now() + " Ping received");
-    response.sendStatus(200);
+
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
 });
 app.listen(process.env.PORT);
 setInterval(() => {
-    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
+
 bot.on("ready", () => {
     console.log("Ready to go!");
     bot.user.setActivity("with my army of Porygons", { type: "PLAYING" });
@@ -75,6 +77,10 @@ bot.on("message", msg => {
     if (msg.content.includes("OwO") || msg.content.includes("owo")) {
         msg.channel.send("OwO? What's this?");
     }
+  
+    if (msg.content.includes("powwidge") || msg.content.includes("Powwidge")) {
+        msg.channel.send("no.");
+  }
     //Check for messages with the prefix
     if (msg.content.startsWith(ConfigFile.config.prefix)) {
         handleCommand(msg);
