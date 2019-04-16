@@ -30,6 +30,7 @@ exports.config = {
         "d20",
         "d100",
         "flip",
+        "8ball",
         "stop",
         "list",
         "help"
