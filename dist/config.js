@@ -11,6 +11,7 @@ exports.config = {
         "leave",
         "johnny",
         "cry",
+        "rights",
         "airhorn",
         "diddy",
         "porygon",

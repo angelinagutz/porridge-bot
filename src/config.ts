@@ -9,6 +9,7 @@ export let config = {
         "leave",
         "johnny",
         "cry",
+        "rights",
         "airhorn",
         "diddy",
         "porygon",
