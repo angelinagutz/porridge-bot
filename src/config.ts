@@ -28,6 +28,8 @@ export let config = {
         "d20",
         "d100",
         "flip",
+        "8ball",
+        "funny",
         "stop",
         "list",
         "help"
