@@ -17,7 +17,8 @@ export default class funny implements IBotCommand {
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
         var imageNum = Math.floor(Math.random() * (115 - 1 + 1) + 1);
 
-        msgObject.channel.send ({files: ["../assets/funny/" + imageNum + ".png"]});
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/funny/${imageNum}.PNG`);
+        msgObject.channel.send(attachment);
 
     }
 }

@@ -25,7 +25,6 @@ class ball {
             if (outcome == 0) {
                 outcome += 1;
             }
-            msgObject.channel.send("```You asked: " + question + "```");
             msgObject.channel.send("```Porridge says: " + replies[outcome] + "```");
         }
     }

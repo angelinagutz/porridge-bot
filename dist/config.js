@@ -10,6 +10,8 @@ exports.config = {
         "join",
         "leave",
         "johnny",
+        "pet",
+        "swing",
         "cry",
         "rights",
         "airhorn",
@@ -32,6 +34,7 @@ exports.config = {
         "flip",
         "8ball",
         "funny",
+        "cheer",
         "stop",
         "list",
         "help"

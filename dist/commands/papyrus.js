@@ -12,10 +12,10 @@ class papyrus {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        const papyrus = bot.emojis.get("567084797701390346");
+        const papyrus = bot.emojis.get("459392554866180106");
         if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
             var connection = msgObject.guild.voiceConnection;
-            msgObject.channel.send("```NYEH HEH HEH!```\n" + papyrus);
+            msgObject.channel.send("NYEH HEH HEH!\n" + `${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} `);
             var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=ijrzwMLd218', { filter: 'audioonly' }));
             dispatcher.setVolume(0.20);
         }

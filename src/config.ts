@@ -8,6 +8,8 @@ export let config = {
         "join",
         "leave",
         "johnny",
+        "pet",
+        "swing",
         "cry",
         "rights",
         "airhorn",
@@ -30,6 +32,7 @@ export let config = {
         "flip",
         "8ball",
         "funny",
+        "cheer",
         "stop",
         "list",
         "help"

@@ -7,8 +7,6 @@ import { request } from "https";
 const app = express();
 
 const bot: Discord.Client = new Discord.Client();
-var petNum: number = 0;
-var batNum: number = 0;
 
 let commands: IBotCommand[] = [];
 
@@ -49,7 +47,7 @@ bot.on("message", msg => {
             msg.channel.send("(｡･ω･｡)ﾉ♡");
         } 
         
-        else if (msg.content.includes("Hello") || msg.content.includes("Hi") || msg.content.includes("hello") || msg.content.includes("hi") || msg.content.includes("HELLO") || msg.content.includes("HI")) {
+        else if (msg.content.includes("Hello") || msg.content.includes("Hi ") || msg.content.includes("hello") || msg.content.includes("hi ") || msg.content.includes("HELLO") || msg.content.includes("HI ")) {
             msg.channel.send("Bzzt! Hello, " + msg.author.toString() + "! ( ´ ▽ ` )ﾉ");
         }
 
@@ -89,34 +87,6 @@ bot.on("message", msg => {
       handleCommand(msg);
     
     }
-
-    if (msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("pet")) {
-        petNum++;
-        msg.channel.send("♥（ﾉ´∀`）");
-        msg.channel.send(msg.author.toString() + " has petted Porridge! Porridge has been pet " + petNum + " times!");
-    }
-
-    if (msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("bat") || msg.content.includes("swing"))) {
-
-        msg.channel.send("(ʃƪ¬‿¬)");
-        var chance = Math.floor(Math.random() * 3);
-        if (chance == 0) {
-            chance += 1;
-        }
-
-        if (chance == 1) {
-            msg.channel.send(msg.author.toString() + " takes a swing....**and misses**!");
-        }
-
-        if (chance == 2) {
-            batNum++;
-            msg.channel.send(msg.author.toString() + " takes a swing....**and hits**! Nimue has been hit with a bat " + batNum + " times.");
-        }
-        
-       
-    }
-
-    
 });
 
 async function handleCommand(msg: Discord.Message) {

@@ -15,11 +15,9 @@ const express = require("express");
 const https_1 = require("https");
 const app = express();
 const bot = new Discord.Client();
-var petNum = 0;
-var batNum = 0;
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-app.get("/", http.request, response => {
+app.get("/", https_1.request, response => {
     console.log(Date.now() + " Ping received");
     response.sendStatus(200);
 });
@@ -50,7 +48,7 @@ bot.on("message", msg => {
         if (msg.content.includes("love") || msg.content.includes("LOVE") || msg.content.includes(String.fromCodePoint(10084))) {
             msg.channel.send("(｡･ω･｡)ﾉ♡");
         }
-        else if (msg.content.includes("Hello") || msg.content.includes("Hi") || msg.content.includes("hello") || msg.content.includes("hi") || msg.content.includes("HELLO") || msg.content.includes("HI")) {
+        else if (msg.content.includes("Hello") || msg.content.includes("Hi ") || msg.content.includes("hello") || msg.content.includes("hi ") || msg.content.includes("HELLO") || msg.content.includes("HI ")) {
             msg.channel.send("Bzzt! Hello, " + msg.author.toString() + "! ( ´ ▽ ` )ﾉ");
         }
         else if (msg.content.includes("hewwo") || msg.content.includes("HEWWO") || msg.content.includes("Hewwo")) {
@@ -78,25 +76,6 @@ bot.on("message", msg => {
     //Check for messages with the prefix
     if (msg.content.startsWith(ConfigFile.config.prefix)) {
         handleCommand(msg);
-    }
-    if (msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("pet")) {
-        petNum++;
-        msg.channel.send("♥（ﾉ´∀`）");
-        msg.channel.send(msg.author.toString() + " has petted Porridge! Porridge has been pet " + petNum + " times!");
-    }
-    if (msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("bat") || msg.content.includes("swing"))) {
-        msg.channel.send("(ʃƪ¬‿¬)");
-        var chance = Math.floor(Math.random() * 3);
-        if (chance == 0) {
-            chance += 1;
-        }
-        if (chance == 1) {
-            msg.channel.send(msg.author.toString() + " takes a swing....**and misses**!");
-        }
-        if (chance == 2) {
-            batNum++;
-            msg.channel.send(msg.author.toString() + " takes a swing....**and hits**! Nimue has been hit with a bat " + batNum + " times.");
-        }
     }
 });
 function handleCommand(msg) {
