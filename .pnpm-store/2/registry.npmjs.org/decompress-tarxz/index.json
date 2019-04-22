@@ -1,0 +1,167 @@
+{
+	"versions": {
+		"1.0.0": {
+			"name": "decompress-tarxz",
+			"version": "1.0.0",
+			"dependencies": {
+				"is-xz": "^1.0.0",
+				"lzma": "^2.0.5",
+				"object-assign": "^2.0.0",
+				"strip-dirs": "^1.0.0",
+				"tar-stream": "^1.1.1",
+				"through2": "^0.6.1",
+				"vinyl": "^0.4.3"
+			},
+			"devDependencies": {
+				"ava": "^0.0.4",
+				"is-jpg": "^1.0.0",
+				"vinyl-file": "^1.1.0"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"shasum": "81dcdffd93b347f64709519053dae996fcc42dad",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-1.0.0.tgz"
+			},
+			"engines": {
+				"node": ">=0.10.0"
+			}
+		},
+		"1.0.1": {
+			"name": "decompress-tarxz",
+			"version": "1.0.1",
+			"dependencies": {
+				"is-xz": "^1.0.0",
+				"lzma": "^2.0.5",
+				"lzma-native": "^0.2.11",
+				"object-assign": "^2.0.0",
+				"strip-dirs": "^1.0.0",
+				"tar-stream": "^1.1.1",
+				"through2": "^0.6.1",
+				"vinyl": "^0.4.3"
+			},
+			"devDependencies": {
+				"ava": "^0.0.4",
+				"is-jpg": "^1.0.0",
+				"vinyl-file": "^1.1.0"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"shasum": "3561587303c95f3906d5b14bf1cf401271be65d9",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-1.0.1.tgz"
+			},
+			"engines": {
+				"node": ">=0.10.0"
+			}
+		},
+		"1.0.2": {
+			"name": "decompress-tarxz",
+			"version": "1.0.2",
+			"dependencies": {
+				"is-xz": "^1.0.0",
+				"lzma-native": "^0.2.11",
+				"object-assign": "^2.0.0",
+				"strip-dirs": "^1.0.0",
+				"tar-stream": "^1.1.1",
+				"through2": "^0.6.1",
+				"vinyl": "^0.4.3"
+			},
+			"devDependencies": {
+				"ava": "^0.0.4",
+				"is-jpg": "^1.0.0",
+				"vinyl-file": "^1.1.0"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"shasum": "6bb357ef2bd96a4431d3042549a2df28abf8816b",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-1.0.2.tgz"
+			},
+			"engines": {
+				"node": ">=0.10.0"
+			}
+		},
+		"2.0.0": {
+			"name": "decompress-tarxz",
+			"version": "2.0.0",
+			"dependencies": {
+				"decompress-tar": "^4.0.0",
+				"file-type": "^3.8.0",
+				"lzma-native": "^1.0.2"
+			},
+			"devDependencies": {
+				"ava": "*",
+				"is-jpg": "^1.0.0",
+				"pify": "^2.3.0",
+				"xo": "*"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"shasum": "90f2f3992101de0116fd9420dbf598e610ee0fc4",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-2.0.0.tgz"
+			},
+			"engines": {
+				"node": ">=4"
+			}
+		},
+		"2.1.0": {
+			"name": "decompress-tarxz",
+			"version": "2.1.0",
+			"dependencies": {
+				"decompress-tar": "^4.1.0",
+				"file-type": "^3.8.0",
+				"is-stream": "^1.1.0",
+				"lzma-native": "^1.0.2"
+			},
+			"devDependencies": {
+				"ava": "*",
+				"is-jpg": "^1.0.0",
+				"pify": "^2.3.0",
+				"xo": "*"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"shasum": "8c59fc06b2671b49e2e142824028fcf9d799c59c",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-2.1.0.tgz"
+			},
+			"engines": {
+				"node": ">=4"
+			}
+		},
+		"2.1.1": {
+			"name": "decompress-tarxz",
+			"version": "2.1.1",
+			"dependencies": {
+				"decompress-tar": "^4.1.0",
+				"file-type": "^3.8.0",
+				"is-stream": "^1.1.0",
+				"lzma-native": "^3.0.1"
+			},
+			"devDependencies": {
+				"ava": "*",
+				"is-jpg": "^1.0.0",
+				"pify": "^2.3.0",
+				"xo": "*"
+			},
+			"_hasShrinkwrap": false,
+			"directories": {},
+			"dist": {
+				"integrity": "sha512-U7LniyhLTpCc07lAmNXMX4NBW60ONkpGTwo6KxIDk9zk22GYh5NKjEI09F8I1oYkGr9WGOA6OH7scqLo7Xu5lA==",
+				"shasum": "1c657dc69322a5a0bac8431f2574a77e5884d3f5",
+				"tarball": "https://registry.npmjs.org/decompress-tarxz/-/decompress-tarxz-2.1.1.tgz"
+			},
+			"engines": {
+				"node": ">=4"
+			}
+		}
+	},
+	"name": "decompress-tarxz",
+	"dist-tags": {
+		"latest": "2.1.1"
+	},
+	"modified": "2017-07-13T17:31:25.557Z",
+	"cachedAt": 1555809855143
+}
