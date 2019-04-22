@@ -32,6 +32,7 @@ export let config = {
         "flip",
         "8ball",
         "funny",
+        "noot",
         "cheer",
         "stop",
         "list",

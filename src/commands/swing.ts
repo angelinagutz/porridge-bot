@@ -1,7 +1,7 @@
 import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 
-var batNum = 0;
+var batNum = 2;
 
 export default class swing implements IBotCommand {
 
