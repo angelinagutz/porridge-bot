@@ -24,6 +24,7 @@ exports.config = {
         "nash",
         "bug",
         "knife",
+        "birthday",
         "terry",
         "at4wquest",
         "d4",
