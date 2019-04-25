@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var petNum = 11;
+var petNum = 13;
 class pet {
     constructor() {
         this._command = "pet";
