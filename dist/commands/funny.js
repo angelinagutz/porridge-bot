@@ -12,7 +12,7 @@ class funny {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        var imageNum = Math.floor(Math.random() * (115 - 1 + 1) + 1);
+        var imageNum = Math.floor(Math.random() * (120 - 1 + 1) + 1);
         var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/funny/${imageNum}.PNG`);
         msgObject.channel.send(attachment);
     }
