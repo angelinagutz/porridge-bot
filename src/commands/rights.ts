@@ -16,6 +16,8 @@ export default class rights implements IBotCommand {
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
         msgObject.channel.send("Trans rights!!! ٩(｡•ω•｡)و");
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/porridge.PNG`);
+        msgObject.channel.send(attachment);
     
 
     }

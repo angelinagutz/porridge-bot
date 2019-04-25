@@ -23,6 +23,7 @@ exports.config = {
         "fuck",
         "nash",
         "bug",
+        "knife",
         "terry",
         "at4wquest",
         "d4",
