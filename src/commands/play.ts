@@ -18,11 +18,13 @@ export default class play implements IBotCommand {
 
   async runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): Promise<void> {
 
-        var link = msgObject.content.substr(7, msgObject.content.length);
+        var getString = msgObject.content.split(" ");
+
+        var link = getString[1];
         var validate = YTDL.validateURL(link);
         msgObject.delete();
         
-        if (msgObject.content.length < 7 || !validate) {
+        if (!getString[1] || !validate) {
             msgObject.channel.send("**```Bzzt! Oops! Please put in a valid YouTube URL!```**");
         }
         else {

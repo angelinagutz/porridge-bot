@@ -17,7 +17,7 @@ const app = express();
 const bot = new Discord.Client();
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-app.get("/", (request, response) => {
+app.get("/", https_1.request, response => {
     console.log(Date.now() + " Ping received");
     response.sendStatus(200);
 });
