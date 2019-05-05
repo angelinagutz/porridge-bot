@@ -52,7 +52,7 @@ export default class roll implements IBotCommand {
         }
         //If the value is more than 99
         else if (numOfDice > 100) {
-            msgObject.channel.send("```Bzzt! That's too many dice!!!! I can't roll that many!!! Σ(ﾟдﾟ；)```");
+            msgObject.channel.send("```Bzzt! I can only roll up to 100 dice!!!! Σ(ﾟдﾟ；)```");
         }
 
         //Get which sided die
@@ -67,7 +67,7 @@ export default class roll implements IBotCommand {
          if (isNaN(numOfSides)) {
          msgObject.channel.send("``Bzzt! Oops! Please put in a valid type of die you want to roll!");
         }
-        //If the value is more than 999
+        //If the value is more than 100
         else if (numOfSides > 100) {
             msgObject.channel.send("```Bzzt! The die you want to roll has too many sides!!!! Σ(ﾟдﾟ；)```");
             }
