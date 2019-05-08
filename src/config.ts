@@ -28,6 +28,7 @@ export let config = {
         "roll",
         "flip",
         "8ball",
+        "secret",
         "funny",
         "noot",
         "cheer",

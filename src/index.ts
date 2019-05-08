@@ -59,7 +59,10 @@ bot.on("message", msg => {
             msg.channel.send("Porygon is the best Pokemon! ( ◞･౪･)");
         }
 
-       
+       else if (msg.content.includes("count how many sand there are") || msg.content.includes("Count how many sand there are")) {
+          msg.channel.send("That's gonna take forever!!!!!");
+            
+       }
 
         else {
             msg.channel.send("(◕‿◕✿)");
@@ -73,12 +76,12 @@ bot.on("message", msg => {
 
     //Check for The Secret Words
 
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("ghost")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word")) {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
 
-    if (msg.content.includes("OwO") || msg.content.includes("owo")) {
+    if (msg.content.includes("OwO ") || msg.content.includes(" owo")) {
         msg.channel.send("OwO? What's this?");
     }
     //Check for messages with the prefix

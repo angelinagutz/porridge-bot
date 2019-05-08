@@ -22,6 +22,7 @@ class roll {
         if (!getString[1]) {
             msgObject.channel.send("```Bzzt! Oops! Please input what dice you want to roll!```");
         }
+        //If the message doesn't follow the format
         else if (!getString[1].includes("d")) {
             msgObject.channel.send("```Oops! Please follow the XdY format when rolling your dice!```");
         }
@@ -64,14 +65,17 @@ class roll {
             //At this point, it's time to roll!!!!!
             if ((!isNaN(numOfDice) && (numOfDice <= 100)) && (!isNaN(numOfSides) && (numOfSides <= 100))) {
                 for (var i = 0; i < numOfDice; i++) {
+                    //Every result to be pushed into an array
                     diceRoll.push(Math.floor(Math.random() * (numOfSides + 1 - 1) + 1));
                     if (diceRoll[i] == 0) {
                         diceRoll[i] += 1;
                     }
+                    //Add the result to a sum
                     sum += diceRoll[i];
                 }
                 //Print results
                 for (var i = 0; i < diceRoll.length; i++) {
+                    //Append resultsString with each dice roll result, and adding a plus sign in between
                     resultsString += diceRoll[i];
                     if (i != (diceRoll.length - 1)) {
                         resultsString += " + ";
@@ -80,6 +84,12 @@ class roll {
                 msgObject.channel.send("```Now rolling: " + numOfDice + "d" + numOfSides + "\nBzzt! Your result: " + resultsString + "```");
                 if (sum != diceRoll[0]) {
                     msgObject.channel.send("```The sum of this roll is: " + sum + "```");
+                    /*
+                    *Message prints as:
+                    *Now rolling: [XdY]
+                    *Bzzt! Your result: [Results]
+                    *The sum of this roll is: [Sum]
+                    */
                 }
             }
         }
