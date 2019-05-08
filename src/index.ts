@@ -81,7 +81,7 @@ bot.on("message", msg => {
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
 
-    if (msg.content.includes("OwO ") || msg.content.includes(" owo")) {
+    if (msg.content.includes("OwO") || msg.content.includes(" owo")) {
         msg.channel.send("OwO? What's this?");
     }
     //Check for messages with the prefix

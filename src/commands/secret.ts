@@ -8,7 +8,9 @@ var replies = ["Up Up Down Down Left Right Left Right B A Start", "This isn't ac
 "Is 90's Kid truly innocent?", "Fantasy Costco! Where all your dreams come true! (Got a deal for you!)", "https://www.youtube.com/watch?v=mjIFQw6U5hc",
 "The rumour come out: does Bruno Mars is gay?", "Top Ten Places To Store a Cursed Longbox.", 
 "According to all known laws of aviation, there is no way a bee should be able to fly.", "Remember to stay hydrated.", "Have you eaten yet?", "Remember to stretch your legs!",
-"Porygon: A Pokémon that consists entirely of programming code. Capable of moving freely in cyberspace."]
+"Porygon: A Pokémon that consists entirely of programming code. Capable of moving freely in cyberspace.", "....you know ;)",
+"Soylent green.....is people.", 
+"I saw all of existence, all at once. I saw a dark storm, a living hunger, eating it from within. But I saw a brilliant light, heralded by seven birds, flying tirelessly from the storm."]
 
 export default class secret implements IBotCommand {
 
