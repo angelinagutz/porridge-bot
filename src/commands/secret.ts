@@ -8,8 +8,9 @@ var replies = ["Up Up Down Down Left Right Left Right B A Start", "This isn't ac
 "Is 90's Kid truly innocent?", "Fantasy Costco! Where all your dreams come true! (Got a deal for you!)", "https://www.youtube.com/watch?v=mjIFQw6U5hc",
 "The rumour come out: does Bruno Mars is gay?", "Top Ten Places To Store a Cursed Longbox.", 
 "According to all known laws of aviation, there is no way a bee should be able to fly.", "Remember to stay hydrated.", "Have you eaten yet?", "Remember to stretch your legs!",
-"Porygon: A Pokémon that consists entirely of programming code. Capable of moving freely in cyberspace.", "....you know ;)",
-"Soylent green.....is people.", 
+"Porygon: A Pokémon that consists entirely of programming code. Capable of moving freely in cyberspace.", "....you know ;)", "How did I get here?", "This is not my beautiful house. This is not my beautiful wife!",
+"Soylent green.....is people.", "I know many things. The date for the next AT4WQuest update is not one of them.", "https://www.youtube.com/watch?v=OXQwx1EolD8", "Oh snap! I do not hear such a truth...!?", "We̯̠̞ ̲̖͎̬̺̕a̸̦ṛ̶̟e̤̯̗ ͇̖̞ṯ̛h̤͎̣͈͇e̸ ͇̠̟͚͙̼͔M̸͖̠̻̝e̤͈̥t̗͎͍͙̱̝̫á̳͉̯͕̲͕͕.͕̞̗̭̻",
+"I can't stop this feeling deep inside of me.", "Who is Fat Grandma?", "Can you truly defeat Pilo?",
 "I saw all of existence, all at once. I saw a dark storm, a living hunger, eating it from within. But I saw a brilliant light, heralded by seven birds, flying tirelessly from the storm."]
 
 export default class secret implements IBotCommand {

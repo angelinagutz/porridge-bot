@@ -1,7 +1,7 @@
 import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 
-var petNum = 16;
+var petNum = 20;
 
 export default class pet implements IBotCommand {
 
