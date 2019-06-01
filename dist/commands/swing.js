@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var batNum = 14;
+var batNum = 16;
 class swing {
     constructor() {
         this._command = "swing";
