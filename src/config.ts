@@ -25,6 +25,7 @@ export let config = {
         "birthday",
         "terry",
         "at4wquest",
+        "harvester",
         "roll",
         "flip",
         "8ball",
