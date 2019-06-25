@@ -60,6 +60,9 @@ bot.on("message", msg => {
         else if (msg.content.includes("count how many sand there are") || msg.content.includes("Count how many sand there are")) {
             msg.channel.send("That's gonna take forever!!!!!");
         }
+        else if (msg.content.includes(":pokebean:")) {
+            msg.channel.send("(　 ิ౪ ิ )っ─∈");
+        }
         else {
             msg.channel.send("(◕‿◕✿)");
         }

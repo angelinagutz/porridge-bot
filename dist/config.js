@@ -28,6 +28,7 @@ exports.config = {
         "terry",
         "at4wquest",
         "harvester",
+        "jeffrey",
         "roll",
         "flip",
         "8ball",

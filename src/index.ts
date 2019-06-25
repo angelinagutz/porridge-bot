@@ -64,6 +64,10 @@ bot.on("message", msg => {
             
        }
 
+       else if (msg.content.includes(":pokebean:")) {
+           msg.channel.send("(　 ิ౪ ิ )っ─∈");
+       }
+
         else {
             msg.channel.send("(◕‿◕✿)");
         }
