@@ -79,6 +79,10 @@ bot.on("message", msg => {
     if (msg.content.includes("OwO") || msg.content.includes(" owo")) {
         msg.channel.send("OwO? What's this?");
     }
+    if (msg.content.includes("celery")) {
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
+        msg.channel.send(attachment);
+    }
     //Check for messages with the prefix
     if (msg.content.startsWith(ConfigFile.config.prefix)) {
         handleCommand(msg);
