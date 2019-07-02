@@ -85,11 +85,11 @@ bot.on("message", msg => {
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
 
-    if (msg.content.includes("OwO") || msg.content.includes(" owo")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes(" owo")) {
         msg.channel.send("OwO? What's this?");
     }
 
-    if (msg.content.includes("celery")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("celery")) {
         var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
         msg.channel.send(attachment);
     }
