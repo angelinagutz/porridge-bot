@@ -76,6 +76,9 @@ bot.on("message", msg => {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("What happened")) || (msg.content.includes("what happened"))) {
+        msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
+    }
     if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes(" owo")) {
         msg.channel.send("OwO? What's this?");
     }
