@@ -13,7 +13,7 @@ class johnny {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        var attachment = new Discord.Attachment('https://i.imgur.com/6uysVsI.jpg');
+        var attachment = new Discord.Attachment('https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/Johnny.PNG.png');
         if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
             var connection = msgObject.guild.voiceConnection;
             msgObject.channel.send(msgObject.author.toString() + ", do you wish to know about our Lord and Saviour Johnny the Ghost?");

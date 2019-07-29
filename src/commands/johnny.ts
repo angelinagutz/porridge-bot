@@ -16,7 +16,7 @@ export default class johnny implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var attachment = new Discord.Attachment('https://i.imgur.com/6uysVsI.jpg');
+        var attachment = new Discord.Attachment('https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/Johnny.PNG.png');
 
         if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
             var connection = msgObject.guild.voiceConnection;
