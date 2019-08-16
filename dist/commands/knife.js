@@ -13,7 +13,7 @@ class knife {
     }
     runCommand(args, msgObject, bot) {
         msgObject.channel.send(String.fromCodePoint(128298) + String.fromCodePoint(128298));
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/knife_porridge.png`);
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/knife_porridge.PNG`);
         msgObject.channel.send(attachment);
     }
 }

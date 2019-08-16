@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var petNum = 22;
 class pet {
     constructor() {
         this._command = "pet";
@@ -12,9 +11,8 @@ class pet {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        petNum++;
         msgObject.channel.send("♥（ﾉ´∀`）");
-        msgObject.channel.send(msgObject.author.toString() + " has petted Porridge! Porridge has been pet " + petNum + " times!");
+        msgObject.channel.send(msgObject.author.toString() + " has petted Porridge!");
     }
 }
 exports.default = pet;
