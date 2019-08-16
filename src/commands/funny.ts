@@ -2,7 +2,7 @@
 import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 
-var maxNum = 128;
+var maxNum = 129;
 
 export default class funny implements IBotCommand {
 
