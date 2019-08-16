@@ -28,7 +28,7 @@ export default class swing implements IBotCommand {
         }
         
         if (chance == 2) {
-            var item = Math.floor(Math.random() * (replies.length - 1 + 1) + 1);
+            var item = Math.floor(Math.random() * replies.length);
             msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** " + replies[item] + " has felt the force of your bat.");
     
 
