@@ -1,7 +1,7 @@
 import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 
-var replies = ["Nimue", "Harvey's body", "The Entity"]
+var replies = ["", "Nimue", "Harvey's body", "The Entity"]
 
 export default class swing implements IBotCommand {
 
@@ -29,6 +29,9 @@ export default class swing implements IBotCommand {
         
         if (chance == 2) {
             var item = Math.floor(Math.random() * replies.length);
+            if (item == 0) {
+                item += 1;
+            }
             msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** " + replies[item] + " has felt the force of your bat.");
     
 
