@@ -17,7 +17,7 @@ export default class knife implements IBotCommand {
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
         msgObject.channel.send(String.fromCodePoint(128298) + String.fromCodePoint(128298));
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/knife_porridge.PNG`);
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/knife_porridge.png`);
         msgObject.channel.send(attachment);
 
     }

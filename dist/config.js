@@ -20,6 +20,7 @@ exports.config = {
         "anana",
         "ruby",
         "papyrus",
+        "linkara",
         "fuck",
         "nash",
         "bug",

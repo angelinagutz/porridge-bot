@@ -2,6 +2,8 @@ import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 import * as YTDL from 'ytdl-core';
 
+var attachment;
+
 export default class johnny implements IBotCommand {
 
     private readonly _command = "johnny";
@@ -16,8 +18,13 @@ export default class johnny implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var attachment = new Discord.Attachment('https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/Johnny.PNG.png');
-
+        var chance = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+        if (chance == 50) {
+            attachment = new Discord.Attachment('https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/Johnny2.PNG')    
+        }
+        else {
+        attachment = new Discord.Attachment('https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/Johnny.PNG.png');
+        }
         if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
             var connection = msgObject.guild.voiceConnection;
             msgObject.channel.send(msgObject.author.toString() + ", do you wish to know about our Lord and Saviour Johnny the Ghost?");

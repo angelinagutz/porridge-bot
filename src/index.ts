@@ -71,7 +71,11 @@ bot.on("message", msg => {
         else {
             msg.channel.send("(◕‿◕✿)");
         }
-    }
+
+        if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge no") || msg.content.includes("porridge no") || msg.content.includes("PORRIDGE NO")) {
+            
+            msg.channel.send("Porridge yes!!! **(◕‿◕✿)**");
+        }
 
     if (msg.content.includes("diddy") && msg.author.id.toString() == "218191494832586763") {
         msg.channel.send("I gotchu fam (⌐■_■)")
@@ -80,7 +84,7 @@ bot.on("message", msg => {
 
     //Check for The Secret Words
 
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes(":spectre:")) {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
@@ -89,7 +93,7 @@ bot.on("message", msg => {
         msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
     }
 
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes(" owo")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
         msg.channel.send("OwO? What's this?");
     }
 

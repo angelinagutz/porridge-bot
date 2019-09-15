@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var replies = ["Nimue", "Harvey's body", "The Entity"];
 class swing {
     constructor() {
         this._command = "swing";
@@ -21,8 +20,7 @@ class swing {
             msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and misses**!");
         }
         if (chance == 2) {
-            var item = Math.floor(Math.random() * (replies.length - 1 + 1) + 1);
-            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** " + replies[item] + " has felt the force of your bat.");
+            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** Nimue has just felt the force of your bat.");
         }
     }
 }
