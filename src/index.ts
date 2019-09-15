@@ -71,6 +71,7 @@ bot.on("message", msg => {
         else {
             msg.channel.send("(◕‿◕✿)");
         }
+    }
 
         if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge no") || msg.content.includes("porridge no") || msg.content.includes("PORRIDGE NO")) {
             
@@ -107,6 +108,7 @@ bot.on("message", msg => {
       handleCommand(msg);
     
     }
+
 });
 
 async function handleCommand(msg: Discord.Message) {

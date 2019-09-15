@@ -66,32 +66,32 @@ bot.on("message", msg => {
         else {
             msg.channel.send("(◕‿◕✿)");
         }
-        if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge no") || msg.content.includes("porridge no") || msg.content.includes("PORRIDGE NO")) {
-            msg.channel.send("Porridge yes!!! **(◕‿◕✿)**");
-        }
-        if (msg.content.includes("diddy") && msg.author.id.toString() == "218191494832586763") {
-            msg.channel.send("I gotchu fam (⌐■_■)");
-            msg.channel.send("https://www.youtube.com/watch?v=RFZzMbI-mSo");
-        }
-        //Check for The Secret Words
-        if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes(":spectre:")) {
-            msg.channel.send("DID SOMEONE SAY GHOST?");
-            msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
-        }
-        if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("What hap")) || (msg.content.includes("Wha hap")) || (msg.content.includes("what hap")) || (msg.content.includes("wha hap"))) {
-            msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
-        }
-        if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
-            msg.channel.send("OwO? What's this?");
-        }
-        if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("celery")) {
-            var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
-            msg.channel.send(attachment);
-        }
-        //Check for messages with the prefix
-        if (msg.content.startsWith(ConfigFile.config.prefix)) {
-            handleCommand(msg);
-        }
+    }
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge no") || msg.content.includes("porridge no") || msg.content.includes("PORRIDGE NO")) {
+        msg.channel.send("Porridge yes!!! **(◕‿◕✿)**");
+    }
+    if (msg.content.includes("diddy") && msg.author.id.toString() == "218191494832586763") {
+        msg.channel.send("I gotchu fam (⌐■_■)");
+        msg.channel.send("https://www.youtube.com/watch?v=RFZzMbI-mSo");
+    }
+    //Check for The Secret Words
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes(":spectre:")) {
+        msg.channel.send("DID SOMEONE SAY GHOST?");
+        msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
+    }
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("What hap")) || (msg.content.includes("Wha hap")) || (msg.content.includes("what hap")) || (msg.content.includes("wha hap"))) {
+        msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
+    }
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
+        msg.channel.send("OwO? What's this?");
+    }
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("celery")) {
+        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
+        msg.channel.send(attachment);
+    }
+    //Check for messages with the prefix
+    if (msg.content.startsWith(ConfigFile.config.prefix)) {
+        handleCommand(msg);
     }
 });
 function handleCommand(msg) {
