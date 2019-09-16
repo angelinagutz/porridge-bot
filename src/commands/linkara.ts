@@ -1,7 +1,7 @@
 import * as Discord from "discord.js";
 import {IBotCommand} from "../api";
 
-var maxNum = 86;
+var maxNum = 97;
 
 export default class linkara implements IBotCommand {
 
