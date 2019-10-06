@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Discord = require("discord.js");
-var maxNum = 97;
+var maxNum = 101;
 class linkara {
     constructor() {
         this._command = "linkara";
