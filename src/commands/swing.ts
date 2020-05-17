@@ -15,6 +15,8 @@ export default class swing implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
+        const nimue = bot.emojis.get("711633419733565490");
+
         msgObject.channel.send("(ʃƪ¬‿¬)");
         var chance = Math.floor(Math.random() * 3);
         if (chance == 0) {
@@ -27,7 +29,7 @@ export default class swing implements IBotCommand {
         
         if (chance == 2) {
             
-            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** Nimue has just felt the force of your bat.");
+            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!**" + `${nimue} Nimue has just felt the force of your bat.`);
     
 
     }

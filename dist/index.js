@@ -9,11 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Discord = require("discord.js");
+const DiscordRSS = require("discord.rss");
 const ConfigFile = require("./config");
 const http = require("http");
 const express = require("express");
 const https_1 = require("https");
 const app = express();
+const drss = new DiscordRSS.Client();
 const bot = new Discord.Client();
 let commands = [];
 loadCommands(`${__dirname}/commands`);
@@ -25,10 +27,13 @@ app.listen(process.env.PORT);
 setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
+//When bot is connected
 bot.on("ready", () => {
     console.log("Ready to go!");
     bot.user.setActivity("with my army of Porygons", { type: "PLAYING" });
 });
+//Actions detected by the bot
+//When a member joins the server
 bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find(ch => ch.name === 'central');
     // Do nothing if the channel wasn't found on this server
@@ -38,6 +43,7 @@ bot.on('guildMemberAdd', member => {
     // Send the message, mentioning the member
     channel.send(`Bzzt! Hello, ${member}! I'm Porridge, the server's Porygon! Remember to read the rules before posting! Have fun!\n(Type **p!help** for a list of useful commands.)`);
 });
+//When a member sends a message
 bot.on("message", msg => {
     //Ignore messages sent by the bot
     if (msg.author.bot) {
@@ -75,12 +81,9 @@ bot.on("message", msg => {
         msg.channel.send("https://www.youtube.com/watch?v=RFZzMbI-mSo");
     }
     //Check for The Secret Words
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes(":spectre:")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes("g-word")) {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
-    }
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("What hap")) || (msg.content.includes("Wha hap")) || (msg.content.includes("what hap")) || (msg.content.includes("wha hap"))) {
-        msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
     }
     if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
         msg.channel.send("OwO? What's this?");

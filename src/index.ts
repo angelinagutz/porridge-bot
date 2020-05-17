@@ -1,10 +1,13 @@
 import * as Discord from "discord.js";
+import * as DiscordRSS from "discord.rss";
 import * as ConfigFile from "./config";
 import { IBotCommand } from "./api";
 import * as http from "http";
 import * as express from "express";
 import { request } from "https";
 const app = express();
+
+const drss: DiscordRSS.Client = new DiscordRSS.Client(); 
 
 const bot: Discord.Client = new Discord.Client();
 
@@ -17,15 +20,21 @@ app.get("/", request, response => {
     response.sendStatus(200);
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT);  
 setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
+
+//When bot is connected
 
 bot.on("ready", () => {
     console.log("Ready to go!");
     bot.user.setActivity("with my army of Porygons", {type: "PLAYING"});
 })
+
+//Actions detected by the bot
+
+//When a member joins the server
 
 bot.on('guildMemberAdd', member => {
     const channel = member.guild.channels.find(ch => ch.name === 'central');
@@ -34,6 +43,8 @@ bot.on('guildMemberAdd', member => {
     // Send the message, mentioning the member
     channel.send(`Bzzt! Hello, ${member}! I'm Porridge, the server's Porygon! Remember to read the rules before posting! Have fun!\n(Type **p!help** for a list of useful commands.)`);
 });
+
+//When a member sends a message
 
 bot.on("message", msg => {
     //Ignore messages sent by the bot
@@ -85,13 +96,9 @@ bot.on("message", msg => {
 
     //Check for The Secret Words
 
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes(":spectre:")) {
+    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes("g-word")) {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
-    }
-
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("What hap")) || (msg.content.includes("Wha hap")) || (msg.content.includes("what hap")) || (msg.content.includes("wha hap"))) {
-        msg.channel.send("https://tenor.com/view/mickey-mouse-disney-minnie-minnie-mouse-gif-13659068");
     }
 
     if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
