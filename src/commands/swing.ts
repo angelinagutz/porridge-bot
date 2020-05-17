@@ -15,7 +15,7 @@ export default class swing implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        const nimue = bot.emojis.get("711633419733565490");
+        const nimue = bot.emojis.get("711633238908731394");
 
         msgObject.channel.send("(ʃƪ¬‿¬)");
         var chance = Math.floor(Math.random() * 3);

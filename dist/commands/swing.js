@@ -11,7 +11,7 @@ class swing {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        const nimue = bot.emojis.get("711633419733565490");
+        const nimue = bot.emojis.get("711633238908731394");
         msgObject.channel.send("(ʃƪ¬‿¬)");
         var chance = Math.floor(Math.random() * 3);
         if (chance == 0) {
