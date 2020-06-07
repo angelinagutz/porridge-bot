@@ -30,8 +30,8 @@ export default class play implements IBotCommand {
         else {
 
         var vidInfo = await YTDL.getInfo(link)
-        var title = vidInfo.title;
-        var author = vidInfo.author.name;
+        var title = vidInfo.videoDetails.title;
+        var author = vidInfo.videoDetails.author.name;
 
             if (msgObject.member.voice.channel && !msgObject.guild.me.voice.connection)  {
                     msgObject.member.voiceChannel.join()

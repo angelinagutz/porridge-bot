@@ -16,7 +16,7 @@ export default class terry implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        if (msgObject.member.voiceChannel && msgObject.guild.me.voice.connection) {
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
             var connection = msgObject.guild.me.voice.connection;
             msgObject.channel.send("```May the road rise to meet you, Terry. (′︿‵｡)```");
             var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=rJTeVOOFMHM', {filter: 'audioonly'} ));

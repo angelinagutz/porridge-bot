@@ -12,7 +12,7 @@ class birthday {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        if (!msgObject.mentions.users.first) {
+        if (!msgObject.mentions.users.first()) {
             msgObject.channel.send("```Bzzt! Please mention the user whose birthday it is today!```");
         }
         else {

@@ -16,7 +16,7 @@ export default class birthday implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        if(!msgObject.mentions.users.first) {
+        if(!msgObject.mentions.users.first()) {
             msgObject.channel.send("```Bzzt! Please mention the user whose birthday it is today!```");
         }
 
