@@ -16,7 +16,7 @@ export default class harvester implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var attachment = new Discord.Attachment('https://66.media.tumblr.com/77ab5b60b58b20ffb71b114f90348793/tumblr_inline_pt063uFPCC1r41xnq_1280.gif');
+        var attachment = new Discord.MessageAttachment('https://66.media.tumblr.com/77ab5b60b58b20ffb71b114f90348793/tumblr_inline_pt063uFPCC1r41xnq_1280.gif');
 
         if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
             var connection = msgObject.guild.me.voice.connection;
