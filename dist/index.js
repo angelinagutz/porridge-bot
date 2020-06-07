@@ -17,7 +17,7 @@ const app = express();
 const bot = new Discord.Client();
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-app.get("/", https_1.request, response => {
+app.get("/", (request, response) => {
     console.log(Date.now() + " Ping received");
     response.sendStatus(200);
 });
@@ -33,7 +33,7 @@ bot.on("ready", () => {
 //Actions detected by the bot
 //When a member joins the server
 bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find(ch => ch.name === 'central');
+    const channel = member.guild.channels.cache.find(ch => ch.name === 'central');
     // Do nothing if the channel wasn't found on this server
     if (!channel) {
         return;
@@ -48,46 +48,47 @@ bot.on("message", msg => {
         return;
     }
     //Checks for Porridge's name for certain things
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge") || msg.content.includes("porridge") || msg.content.includes("PORRIDGE")) {
-        if (msg.content.includes("love") || msg.content.includes("LOVE") || msg.content.includes(String.fromCodePoint(10084))) {
+    var message = msg.content.toLowerCase();
+    if (!message.startsWith(ConfigFile.config.prefix) && message.includes("porridge")) {
+        if (message.includes("love") || msg.content.includes(String.fromCodePoint(10084))) {
             msg.channel.send("(｡･ω･｡)ﾉ♡");
         }
-        else if (msg.content.includes("Hello") || msg.content.includes("Hi ") || msg.content.includes("hello") || msg.content.includes("hi ") || msg.content.includes("HELLO") || msg.content.includes("HI ")) {
+        else if (message.includes("hello") || message.includes("hi ")) {
             msg.channel.send("Bzzt! Hello, " + msg.author.toString() + "! ( ´ ▽ ` )ﾉ");
         }
-        else if (msg.content.includes("hewwo") || msg.content.includes("HEWWO") || msg.content.includes("Hewwo")) {
+        else if (message.includes("hewwo")) {
             msg.channel.send("no.");
         }
-        else if (msg.content.includes("pokemon") || msg.content.includes("Pokemon") && msg.content.includes("best")) {
+        else if (message.includes("pokemon") && message.includes("best")) {
             msg.channel.send("Porygon is the best Pokemon! ( ◞･౪･)");
         }
-        else if (msg.content.includes("count how many sand there are") || msg.content.includes("Count how many sand there are")) {
+        else if (message.includes("count how many sand there are")) {
             msg.channel.send("That's gonna take forever!!!!!");
         }
-        else if (msg.content.includes(":pokebean:")) {
+        else if (message.includes(":pokebean:")) {
             msg.channel.send("(　 ิ౪ ิ )っ─∈");
         }
         else {
             msg.channel.send("(◕‿◕✿)");
         }
     }
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("Porridge no") || msg.content.includes("porridge no") || msg.content.includes("PORRIDGE NO")) {
+    if (!message.startsWith(ConfigFile.config.prefix) && message.includes("porridge no")) {
         msg.channel.send("Porridge yes!!! **(◕‿◕✿)**");
     }
-    if (msg.content.includes("diddy") && msg.author.id.toString() == "218191494832586763") {
+    if (message.includes("diddy") && msg.author.id.toString() == "218191494832586763") {
         msg.channel.send("I gotchu fam (⌐■_■)");
         msg.channel.send("https://www.youtube.com/watch?v=RFZzMbI-mSo");
     }
     //Check for The Secret Words
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && (msg.content.includes("ghost")) || msg.content.includes(" G word") || msg.content.includes(" g word") || msg.content.includes("g-word")) {
+    if (!message.startsWith(ConfigFile.config.prefix) && (message.includes("ghost")) || message.includes(" g word") || message.includes("g-word")) {
         msg.channel.send("DID SOMEONE SAY GHOST?");
         msg.channel.send("https://www.youtube.com/watch?v=27SS8Pnmrok");
     }
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("OwO") || msg.content.includes("owo")) {
+    if (!message.startsWith(ConfigFile.config.prefix) && message.includes("owo")) {
         msg.channel.send("OwO? What's this?");
     }
-    if (!msg.content.startsWith(ConfigFile.config.prefix) && msg.content.includes("celery")) {
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
+    if (!message.startsWith(ConfigFile.config.prefix) && message.includes("celery")) {
+        var attachment = new Discord.MessageAttachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/celery_time.png`);
         msg.channel.send(attachment);
     }
     //Check for messages with the prefix
