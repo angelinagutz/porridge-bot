@@ -1,13 +1,10 @@
 import * as Discord from "discord.js";
-import * as DiscordRSS from "discord.rss";
 import * as ConfigFile from "./config";
 import { IBotCommand } from "./api";
 import * as http from "http";
 import * as express from "express";
 import { request } from "https";
 const app = express();
-
-const drss: DiscordRSS.Client = new DiscordRSS.Client(); 
 
 const bot: Discord.Client = new Discord.Client();
 

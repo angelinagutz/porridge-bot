@@ -12,7 +12,7 @@ class nash {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        var attachment = new Discord.Attachment('https://i.imgur.com/O6S7Mlr.jpg');
+        var attachment = new Discord.MessageAttachment('https://i.imgur.com/O6S7Mlr.jpg');
         msgObject.channel.send(attachment);
     }
 }

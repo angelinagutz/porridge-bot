@@ -13,7 +13,7 @@ export default class porygon implements IBotCommand {
 
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
-        var attachment = new Discord.Attachment('https://cdn.bulbagarden.net/upload/6/6b/137Porygon.png');
+        var attachment = new Discord.MessageAttachment('https://cdn.bulbagarden.net/upload/6/6b/137Porygon.png');
 
         msgObject.channel.send("```Bzzt! It me!```");
         

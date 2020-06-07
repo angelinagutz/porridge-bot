@@ -13,7 +13,7 @@ class rights {
     }
     runCommand(args, msgObject, bot) {
         msgObject.channel.send("Trans rights!!! ٩(｡•ω•｡)و");
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/porridge.png`);
+        var attachment = new Discord.MessageAttachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/image/porridge.png`);
         msgObject.channel.send(attachment);
     }
 }

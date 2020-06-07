@@ -13,9 +13,9 @@ class airhorn {
     }
     runCommand(args, msgObject, bot) {
         //Send that shit
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=OFr74zI1LBM', { filter: 'audioonly' }));
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=OFr74zI1LBM', { filter: 'audioonly' }));
             dispatcher.setVolume(0.20);
             msgObject.channel.send("```Ｏ(≧∇≦)Ｏ```");
         }

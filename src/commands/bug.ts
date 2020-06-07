@@ -23,11 +23,13 @@ export default class bug implements IBotCommand {
         let bugReport = msgObject.content.substr(6, msgObject.content.length); //Grabs everything after p!bug
 
         //Send report to me
-        bot.fetchUser('386268379234959360').then((user => {
+        bot.users.fetch('386268379234959360').then((user => {
             user.send("Bzzt! User " + msgObject.author.toString() + " has found a problem with me: " + bugReport);
         }))
         //Send report to the help channel and respond to p!bug message
-        bot.channels.get("567188138871750667").send("```Bzzt! A problem has been reported: " + bugReport + "```");
+        var bugChannel = bot.channels.cache.get('567188138871750667');
+        bugChannel.send("```Bzzt! A problem has been reported: " + bugReport + "```");
+        
         msgObject.channel.send("```Bzzt! Report sent!! (*•̀ᴗ•́*)و ̑̑ \nA copy of your report has also been sent to the porridge-help channel!```");
     }
     }

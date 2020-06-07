@@ -15,7 +15,7 @@ export default class at4wquest implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        bot.fetchUser('386268379234959360').then((user => {
+        bot.users.fetch('386268379234959360').then((user => {
             msgObject.channel.send("Hey " + user.toString() + ", when is the next AT4WQuest update?");
         }))
     }

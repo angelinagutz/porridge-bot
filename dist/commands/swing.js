@@ -11,7 +11,6 @@ class swing {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        const nimue = bot.emojis.get("711633238908731394");
         msgObject.channel.send("(ʃƪ¬‿¬)");
         var chance = Math.floor(Math.random() * 3);
         if (chance == 0) {
@@ -21,7 +20,8 @@ class swing {
             msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and misses**!");
         }
         if (chance == 2) {
-            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!**" + `${nimue} Nimue has just felt the force of your bat.`);
+            msgObject.channel.send(msgObject.author.toString() + " takes a swing....**and hits!** Nimue has just felt the force of your bat.");
+            msgObject.react('711633238908731394');
         }
     }
 }

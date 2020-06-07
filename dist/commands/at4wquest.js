@@ -11,7 +11,7 @@ class at4wquest {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        bot.fetchUser('386268379234959360').then((user => {
+        bot.users.fetch('386268379234959360').then((user => {
             msgObject.channel.send("Hey " + user.toString() + ", when is the next AT4WQuest update?");
         }));
     }

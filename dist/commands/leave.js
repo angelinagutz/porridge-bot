@@ -12,11 +12,14 @@ class leave {
     }
     runCommand(args, msgObject, bot) {
         //Let us know it all went well
-        if (msgObject.guild.voiceConnection) {
-            msgObject.guild.voiceConnection.disconnect();
+        if (msgObject.guild.me.voice.connection && msgObject.member.voice.channel == msgObject.guild.voice.channel) {
+            msgObject.member.voice.channel.leave();
             msgObject.channel.send("```Bzzt! Porridge has left the voice channel! ＼(＾▽＾*)```");
         }
-        else {
+        else if (msgObject.member.voice.channel != msgObject.guild.voice.channel) {
+            msgObject.channel.send("```Bzzt! You need to be in the voice channel that you want Porridge to leave from!```");
+        }
+        else if (!msgObject.guild.me.voice.connection) {
             msgObject.channel.send("```Bzzt! Porridge is currently not in a voice channel!```");
         }
     }

@@ -12,10 +12,10 @@ class fuck {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             msgObject.channel.send("```Porridge says: Fuck!!!!!!! （‐＾▽＾‐）```");
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=xcO_U9Jceps', { filter: 'audioonly' }));
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=xcO_U9Jceps', { filter: 'audioonly' }));
             dispatcher.setVolume(0.10);
         }
         else {

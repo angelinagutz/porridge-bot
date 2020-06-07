@@ -33,26 +33,26 @@ export default class play implements IBotCommand {
         var title = vidInfo.title;
         var author = vidInfo.author.name;
 
-            if (msgObject.member.voiceChannel && !msgObject.guild.voiceConnection)  {
+            if (msgObject.member.voice.channel && !msgObject.guild.me.voice.connection)  {
                     msgObject.member.voiceChannel.join()
                     .then(connection => {msgObject.channel.send("```Bzzt! Porridge has joined your voice channel! (*＾▽＾)／```").catch(console.log);
                     msgObject.channel.send("```" + String.fromCodePoint(0x1F3B5) + String.fromCodePoint(0x1F3B5) + " NOW PLAYING: " + String.fromCodePoint(0x1F3B5) + String.fromCodePoint(0x1F3B5) + "\n\n" + `${title} from ${author} (URL: ` + link + ")```");
-                    var dispatcher = connection.playStream(YTDL(link, {filter: 'audioonly'}));
+                    var dispatcher = connection.play(YTDL(link, {filter: 'audioonly'}));
                     dispatcher.setVolume(0.15);
             });
             
             }
     
-            else if (msgObject.member.voiceChannel && msgObject.guild.me.voiceChannel) {
-                var connection = msgObject.guild.voiceConnection;
+            else if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+                var connection = msgObject.guild.me.voice.connection;
                 msgObject.channel.send("```" + String.fromCodePoint(0x1F3B5) + String.fromCodePoint(0x1F3B5) + " NOW PLAYING: " + String.fromCodePoint(0x1F3B5) + String.fromCodePoint(0x1F3B5) +  "\n\n" + `${title} from ${author} (URL: ` + link + ")```");
-                var dispatcher = connection.playStream(YTDL(link, {filter: 'audioonly'} ));
+                var dispatcher = connection.play(YTDL(link, {filter: 'audioonly'} ));
                 dispatcher.setVolume(0.15);
                 
             }
         
         }
-                if (!msgObject.member.voiceChannel) {
+                if (!msgObject.member.voice.channel) {
                     msgObject.channel.send("```Bzzt! You are currently not in a voice channel. Please enter the voice channel you want Porridge to join!```");
                 }
 

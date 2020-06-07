@@ -14,11 +14,11 @@ class anana {
     }
     runCommand(args, msgObject, bot) {
         //Send that shit
-        var attachment = new Discord.Attachment('https://i.imgur.com/zI0hjKL.gif');
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        var attachment = new Discord.MessageAttachment('https://i.imgur.com/zI0hjKL.gif');
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             msgObject.channel.send(attachment);
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=15M-wYefxHU', { filter: 'audioonly' }));
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=15M-wYefxHU', { filter: 'audioonly' }));
             dispatcher.setVolume(0.15);
         }
         else {

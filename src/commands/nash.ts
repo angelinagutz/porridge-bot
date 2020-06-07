@@ -16,7 +16,7 @@ export default class nash implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var attachment = new Discord.Attachment('https://i.imgur.com/O6S7Mlr.jpg');
+        var attachment = new Discord.MessageAttachment('https://i.imgur.com/O6S7Mlr.jpg');
         msgObject.channel.send(attachment);
     }
 }

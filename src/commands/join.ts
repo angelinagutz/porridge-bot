@@ -14,21 +14,21 @@ export default class join implements IBotCommand {
         return command === this._command;
 
     }
-    runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
+   async runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): Promise<void> {
         
         //Let us know it all went well
-        if (msgObject.member.voiceChannel && !msgObject.guild.voiceConnection)  {
-                msgObject.member.voiceChannel.join()
+        if (msgObject.member.voice.channel && !msgObject.guild.me.voice.connection)  {
+                msgObject.member.voice.channel.join()
                 .then(connection => {msgObject.channel.send("```Bzzt! Porridge has joined your voice channel! (*＾▽＾)／```").catch(console.log)
-                var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=cXq-0HSG6KY', {filter: 'audioonly'}));
+                var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=cXq-0HSG6KY', {filter: 'audioonly'}));
                 dispatcher.setVolume(0.5);
         });
     }
-        else if (!msgObject.member.voiceChannel) { //User is not in a voice channel
+        else if (!msgObject.member.voice.channel) { //User is not in a voice channel
             msgObject.channel.send("```Bzzt! You are currently not in a voice channel. Please enter the voice channel you want Porridge to join!```");
         }
 
-        else{ //User is already in a voice channel
+        else if (msgObject.guild.voice.connection) { //Porridge is already in a voice channel
             msgObject.channel.send("```Bzzt! Porridge is already in a voice channel!```");
         }
         

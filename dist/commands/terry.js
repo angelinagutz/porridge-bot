@@ -12,10 +12,10 @@ class terry {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        if (msgObject.member.voiceChannel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             msgObject.channel.send("```May the road rise to meet you, Terry. (′︿‵｡)```");
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=rJTeVOOFMHM', { filter: 'audioonly' }));
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=rJTeVOOFMHM', { filter: 'audioonly' }));
             dispatcher.setVolume(0.15);
         }
         else {

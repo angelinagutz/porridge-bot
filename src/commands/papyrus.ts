@@ -15,17 +15,16 @@ export default class papyrus implements IBotCommand {
 
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
-        
-        const papyrus = bot.emojis.get("459392554866180106"); 
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
-            msgObject.channel.send("NYEH HEH HEH!\n" + `${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} ${papyrus} `);
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=ijrzwMLd218', {filter: 'audioonly'} ));
+    
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
+            msgObject.channel.send("NYEH HEH HEH!");
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=ijrzwMLd218', {filter: 'audioonly'} ));
             dispatcher.setVolume(0.20);
         }
 
         else {
-            msgObject.channel.send("```NYEH HEH HEH!```\n" + papyrus);
+            msgObject.channel.send("```NYEH HEH HEH!```");
         }
     }
 }

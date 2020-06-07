@@ -26,7 +26,7 @@ class funny {
                 imageNum = Number(getFileName[1]);
             }
         }
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/funny/${imageNum}.PNG`);
+        var attachment = new Discord.MessageAttachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/funny/${imageNum}.PNG`);
         msgObject.channel.send(attachment);
     }
 }

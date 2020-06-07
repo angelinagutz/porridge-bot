@@ -15,11 +15,11 @@ export default class stop implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
       
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        if (msgObject.member.voice && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             var dispatcher = connection.dispatcher;
             if (dispatcher) {
-            dispatcher.end();
+            dispatcher.destroy();
             msgObject.channel.send("```Bzzt! Porridge has stopped playback.```");
         }
 

@@ -13,10 +13,10 @@ class diddy {
     }
     runCommand(args, msgObject, bot) {
         //Send that shit
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             msgObject.channel.send("```*Diddy Drop Rap plays in the distance*```");
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=RFZzMbI-mSo', { filter: 'audioonly' }));
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=RFZzMbI-mSo', { filter: 'audioonly' }));
             dispatcher.setVolume(0.10);
         }
         else {

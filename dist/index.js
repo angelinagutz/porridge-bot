@@ -9,17 +9,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Discord = require("discord.js");
-const DiscordRSS = require("discord.rss");
 const ConfigFile = require("./config");
 const http = require("http");
 const express = require("express");
 const https_1 = require("https");
 const app = express();
-const drss = new DiscordRSS.Client();
 const bot = new Discord.Client();
 let commands = [];
 loadCommands(`${__dirname}/commands`);
-app.get("/", (request, response) => {
+app.get("/", https_1.request, response => {
     console.log(Date.now() + " Ping received");
     response.sendStatus(200);
 });

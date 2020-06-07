@@ -11,11 +11,11 @@ class stop {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
+        if (msgObject.member.voice && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
             var dispatcher = connection.dispatcher;
             if (dispatcher) {
-                dispatcher.end();
+                dispatcher.destroy();
                 msgObject.channel.send("```Bzzt! Porridge has stopped playback.```");
             }
             else {

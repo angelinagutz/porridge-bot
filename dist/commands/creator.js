@@ -11,7 +11,7 @@ class about {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        bot.fetchUser('386268379234959360').then((user => {
+        bot.users.fetch('386268379234959360').then((user => {
             msgObject.channel.send("Bzzt! Sending " + String.fromCodePoint(10084) + " to the bot's creator, " + user.toString() + "! (´∀｀)♡");
         }));
     }

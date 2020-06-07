@@ -18,9 +18,9 @@ export default class harvester implements IBotCommand {
 
         var attachment = new Discord.Attachment('https://66.media.tumblr.com/77ab5b60b58b20ffb71b114f90348793/tumblr_inline_pt063uFPCC1r41xnq_1280.gif');
 
-        if (msgObject.member.voiceChannel && msgObject.guild.voiceConnection) {
-            var connection = msgObject.guild.voiceConnection;
-            var dispatcher = connection.playStream(YTDL('https://www.youtube.com/watch?v=btEpF334Rtc', {filter: 'audioonly'} ));
+        if (msgObject.member.voice.channel && msgObject.guild.me.voice.connection) {
+            var connection = msgObject.guild.me.voice.connection;
+            var dispatcher = connection.play(YTDL('https://www.youtube.com/watch?v=btEpF334Rtc', {filter: 'audioonly'} ));
             dispatcher.setVolume(0.20);
             msgObject.channel.send(attachment);
         }

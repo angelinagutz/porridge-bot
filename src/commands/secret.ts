@@ -34,7 +34,7 @@ export default class secret implements IBotCommand {
             outcome += 1;
         }
         msgObject.channel.send("```" + replies[outcome] + "```").then(d_msg => {
-            d_msg.delete(30000)
+            d_msg.delete({timeout: 30000})
         });
 
     }

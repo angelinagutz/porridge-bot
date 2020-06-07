@@ -16,7 +16,7 @@ export default class about implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
        
-        bot.fetchUser('386268379234959360').then((user => {
+        bot.users.fetch('386268379234959360').then((user => {
            msgObject.channel.send("Bzzt! Sending " + String.fromCodePoint(10084) + " to the bot's creator, "+ user.toString() + "! (´∀｀)♡");
        }));
      

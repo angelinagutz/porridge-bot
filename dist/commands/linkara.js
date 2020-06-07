@@ -26,7 +26,7 @@ class linkara {
                 imageNum = Number(getFileName[1]);
             }
         }
-        var attachment = new Discord.Attachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/linkara/${imageNum}.png`);
+        var attachment = new Discord.MessageAttachment(`https://raw.githubusercontent.com/angelinagutz/porridge-bot/master/assets/linkara/${imageNum}.png`);
         msgObject.channel.send(attachment);
     }
 }
