@@ -37,7 +37,8 @@ export let config = {
         "cheer",
         "stop",
         "list",
-        "help"
+        "help",
+        "moonball"
         
     ]
 }
