@@ -11,7 +11,7 @@ class moonball {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        var members = msgObject.guild ? .members.cache.random().user.username : ;
+        var members = msgObject.guild.members.cache.random().user.username;
         msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + "'s moonball has hit " + members + "!");
     }
 }

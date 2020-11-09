@@ -18,7 +18,7 @@ export default class moonball implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var members = msgObject.guild?.members.cache.random().user.username;
+        var members = msgObject.guild.members.cache.random().user.username;
 
         msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + "'s moonball has hit " + members + "!");
         
