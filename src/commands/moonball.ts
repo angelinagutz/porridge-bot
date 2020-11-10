@@ -20,7 +20,7 @@ export default class moonball implements IBotCommand {
 
         var members = msgObject.guild.members.cache.random().user.username;
 
-        msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + "threw a moonball and it hit " + members + "!");
+        msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + " threw a moonball and it hit " + members + "!");
         
 
     }

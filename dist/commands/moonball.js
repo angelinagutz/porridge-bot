@@ -12,7 +12,7 @@ class moonball {
     }
     runCommand(args, msgObject, bot) {
         var members = msgObject.guild.members.cache.random().user.username;
-        msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + "threw a moonball and it hit " + members + "!");
+        msgObject.channel.send("MOONBALL! " + msgObject.author.toString() + " threw a moonball and it hit " + members + "!");
     }
 }
 exports.default = moonball;
