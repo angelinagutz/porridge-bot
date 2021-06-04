@@ -40,6 +40,7 @@ exports.config = {
         "stop",
         "list",
         "help",
-        "moonball"
+        "moonball",
+        "garrus"
     ]
 };

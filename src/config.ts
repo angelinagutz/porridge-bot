@@ -38,7 +38,8 @@ export let config = {
         "stop",
         "list",
         "help",
-        "moonball"
+        "moonball",
+        "garrus"
         
     ]
 }
