@@ -16,7 +16,7 @@ export default class garrus implements IBotCommand {
     }
     runCommand(args: string[], msgObject: Discord.Message, bot: Discord.Client): void {
 
-        var num = Math.floor((Math.random() * 1 + 1) - 1);
+        var num = Math.floor((Math.random() * 2 + 1) - 1);
 
         if (num == 0) {
 

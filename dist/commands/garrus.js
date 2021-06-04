@@ -11,7 +11,7 @@ class garrus {
         return command === this._command;
     }
     runCommand(args, msgObject, bot) {
-        var num = Math.floor((Math.random() * 1 + 1) - 1);
+        var num = Math.floor((Math.random() * 2 + 1) - 1);
         if (num == 0) {
             msgObject.channel.send("Can it wait for a bit? I'm in the middle of some calibrations.");
         }
